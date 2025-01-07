@@ -7,3 +7,4 @@ if (file.exists(file_path)) {
 } else {
   stop("The file does not exist. Check the file path.")
 }
+head(data)
