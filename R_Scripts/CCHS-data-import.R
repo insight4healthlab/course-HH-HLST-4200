@@ -7,7 +7,7 @@ library(readr)
 library(dplyr)
 
 # Define the data path (update the path to your file)
-data_path <- "/content/gdrive/My Drive/your_file_name.tab"
+data_path <- "your_file_name.tab"
 
 # Function to read the tab-separated file
 read_tab_file <- function(data_path) {
