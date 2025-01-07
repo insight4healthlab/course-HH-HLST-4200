@@ -7,7 +7,7 @@ library(readr)
 library(dplyr)
 
 # Define the data path (update the path to your file)
-data_path <- "your_file_name.tab"
+data_path <- "Desktop/cchs-82M0013-E-2017-2018-Annual-component_F1-subset.tab" #your_file_name
 
 # Function to read the tab-separated file
 read_tab_file <- function(data_path) {
