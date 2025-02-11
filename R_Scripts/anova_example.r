@@ -1,5 +1,7 @@
+
 install.packages("ggpubr")
 library(dplyr)
+library("ggpubr")
 
 data <- PlantGrowth
 set.seed(123)
@@ -14,13 +16,12 @@ group_by(data, group) %>%
     sd = sd(weight, na.rm = TRUE)
   )
 
-library("ggpubr")
+
 ggboxplot(data, x = "group", y = "weight",
           color = "group", palette = c("#00AFBB", "#E7B800", "#FC4E07"),
           order = c("ctrl", "trt1", "trt2"),
           ylab = "Weight", xlab = "Treatment")
 
-library("ggpubr")
 ggline(data, x = "group", y = "weight",
        add = c("mean_se", "jitter"),
        order = c("ctrl", "trt1", "trt2"),
@@ -34,3 +35,4 @@ res.aov <- aov(weight ~ group, data = data)
 summary(res.aov)
 
 TukeyHSD(res.aov)
+
