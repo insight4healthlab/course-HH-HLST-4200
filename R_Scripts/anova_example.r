@@ -29,6 +29,8 @@ ggline(data, x = "group", y = "weight",
 boxplot(weight ~ group, data = data,
         xlab = "Treatment", ylab = "Weight",
         frame = FALSE, col = c("#00AFBB", "#E7B800", "#FC4E07"))
-
+# One-way Anova
 res.aov <- aov(weight ~ group, data = data)
 summary(res.aov)
+
+TukeyHSD(res.aov)
