@@ -1,4 +1,6 @@
 install.packages('caTools')
+install.packages("ggplot2")
+library(ggplot2)
 library(caTools)
 
 # Create the data frame
